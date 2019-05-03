@@ -1,3 +1,17 @@
+# React Memory Game
+## Can you remember your fruits?
+[Live Demo](https://dstarrtrey.github.io/react-memory-game)
+
+In this react application, you will play a memory game where you will click images, and if they have already been clicked, you will lose. otherwise your score will rise and you will eventually win!
+
+## Strategy 
+It is very helpful to find patterns and break up the images into smaller categories (or components :wink:). Find your own strategy if that doesn't work! 
+
+## Installation
+`Clone` This repository and run `npm install` in your console. Add images at your leisure.
+
+## Create-React-App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
