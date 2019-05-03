@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
+import initialImages from './images.json';
+import { shuffleArr } from './helpers';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import ScoreHeader from './components/ScoreHeader';
 import Rules from './components/Rules';
 import Game from './components/Game';
-import Footer from './components/Footer';
-import initialImages from './images.json';
-import { shuffleArr } from './helpers';
 
 const theme = {
   red: '#FF0000',
@@ -42,9 +41,9 @@ function App() {
   const [ headerMsg, setHeaderMsg ] = useState('Click an image to begin');
   const [ images, setImages ] = useState(shuffleArr([...initialImages]));
 
-  const gameOver = () => {
+  const gameOver = (win = false) => {
     const score = pickedImages.length;
-    score === 9 ? 
+    win ? 
       setHeaderMsg('You won! Play again by clicking an image.')
       : setHeaderMsg(`You lost. Your score was ${score}. Click an image to play again.`);
     if (score > topScore) {
@@ -54,10 +53,15 @@ function App() {
   }
   
   const correctAnswer = picked => {
-    pickedImages.length === 0
-      ? setHeaderMsg("Good luck!")
-      : setHeaderMsg("Correct! Pick another image.");
-    setPickedImages([ ...pickedImages, picked ]);
+    setPickedImages([...pickedImages, picked]);
+    const score = pickedImages.length;
+    if (score === 0) {
+      setHeaderMsg("Good luck!")
+    } else if (score === images.length - 1) {
+      gameOver(true);
+    } else {
+      setHeaderMsg("Correct! Pick another image.");
+    }      
   }
 
   const handleClick = pickedId => {
@@ -69,7 +73,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <GlobalStyle />
         <ScoreHeader score={pickedImages.length} topScore={topScore}>
           {headerMsg}
         </ScoreHeader>
@@ -79,7 +82,7 @@ function App() {
           pickedImages={pickedImages}
           handleClick={handleClick}
         />
-        <Footer />
+        <GlobalStyle />
       </div>
     </ThemeProvider>
   );
