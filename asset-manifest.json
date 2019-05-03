@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/react-memory-game/static/js/main.61dcd2f1.chunk.js",
-    "main.js.map": "/react-memory-game/static/js/main.61dcd2f1.chunk.js.map",
+    "main.js": "/react-memory-game/static/js/main.0cb7e833.chunk.js",
+    "main.js.map": "/react-memory-game/static/js/main.0cb7e833.chunk.js.map",
     "runtime~main.js": "/react-memory-game/static/js/runtime~main.83a7a993.js",
     "runtime~main.js.map": "/react-memory-game/static/js/runtime~main.83a7a993.js.map",
     "static/js/2.bbe9a722.chunk.js": "/react-memory-game/static/js/2.bbe9a722.chunk.js",
     "static/js/2.bbe9a722.chunk.js.map": "/react-memory-game/static/js/2.bbe9a722.chunk.js.map",
     "index.html": "/react-memory-game/index.html",
-    "precache-manifest.3913f9c3a75b929e9a7f6955a67280ee.js": "/react-memory-game/precache-manifest.3913f9c3a75b929e9a7f6955a67280ee.js",
+    "precache-manifest.2d3746746358f281b749bb5b25f91ae5.js": "/react-memory-game/precache-manifest.2d3746746358f281b749bb5b25f91ae5.js",
     "service-worker.js": "/react-memory-game/service-worker.js"
   }
 }
